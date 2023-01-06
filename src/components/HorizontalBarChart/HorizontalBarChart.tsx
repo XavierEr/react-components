@@ -8,13 +8,12 @@ import React, {
 import { clsx } from '../../helpers/clsx';
 //#endregion
 
-import styles from './BarChart.module.scss';
+import styles from './HorizontalBarChart.module.scss';
 
-const BarChart: React.FC<BarChartProps> = ({
+const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
   bars,
   className,
   style,
-  type,
 }): JSX.Element => {
   const highestPoint = useMemo<number>(() => {
     if (bars.length > 0) {
@@ -31,19 +30,15 @@ const BarChart: React.FC<BarChartProps> = ({
   }, [bars]);
 
   return (
-    <div
-      className={clsx(
-        styles.container,
-        type === 'horizontal' && styles.horizontal,
-        type === 'vertical' && styles.vertical,
-        className)}
-      style={style}>
+    <div className={clsx(styles.container, className)} style={style}>
 
       <div className={styles.barLabels}>
-        {bars.map(bar => <div>
-          <div className={styles.barLabel}>{bar.label}</div>
-        </div>)}
-      </div>
+        {
+          bars.map(bar => <div>
+            <div className={styles.barLabel}>{bar.label}</div>
+          </div>)
+        }
+      </div >
 
       <div className={styles.barContainers}>
         {bars.map(bar => {
@@ -67,8 +62,8 @@ const BarChart: React.FC<BarChartProps> = ({
           );
         })}
       </div>
-    </div>
+    </div >
   );
 }
 
-export default BarChart;
+export default HorizontalBarChart;

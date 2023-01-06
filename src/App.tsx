@@ -3,7 +3,7 @@ import React, { StrictMode } from 'react';
 //#endregion
 
 //#region React Component imports
-import BarChart from './components/BarChart/BarChart';
+import HorizontalBarChart from './components/HorizontalBarChart/HorizontalBarChart';
 //#endregion
 
 import styles from './styles/App.module.scss';
@@ -14,6 +14,8 @@ const App: React.FC = (): JSX.Element => {
     { label: 'Second Bar', points: [{ label: 'First Point', value: 100 }, { label: 'Second Point', value: 200 }] },
     { label: 'Third Bar', points: [{ label: 'First Point', value: 1000 }] },
     { label: 'Fourth Bar', points: [{ label: 'First Point', value: 298 }, { label: 'Second Point', value: 1000 }, { label: 'Third Point', value: 562 }] },
+    { label: 'Fifth Bar', points: [{ label: 'First Point', value: 100 }, { label: 'Second Point', value: 200 }] },
+    { label: 'Sixth Bar', points: [{ label: 'First Point', value: 298 }, { label: 'Second Point', value: 1000 }, { label: 'Third Point', value: 562 }] },
   ];
 
   return (
@@ -21,11 +23,7 @@ const App: React.FC = (): JSX.Element => {
       <div className={styles.container}>
         <div className={styles.header}>React Components</div>
 
-        <div className={styles.horizontalBarChart}>
-          <BarChart
-            bars={bars}
-            type='horizontal' />
-        </div>
+        <HorizontalBarChart className={styles.horizontalBarChart} bars={bars} />
       </div>
     </StrictMode>
   );
