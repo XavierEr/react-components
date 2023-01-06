@@ -1,2 +1,25 @@
+{
+  "name": "react-components",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=14.21.2"
+  },
+  "private": true,
+  "main": "index.js",
+  "scripts": {
     "start": "./node_modules/.bin/webpack serve -c webpack.dev.js",
     "build:prod": "./node_modules/.bin/webpack -c webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XavierEr/react-components.git"
+  },
+  "author": "XavierEr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XavierEr/react-components/issues"
+  },
+  "homepage": "https://github.com/XavierEr/react-components#readme"
+}
