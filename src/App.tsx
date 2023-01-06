@@ -5,7 +5,7 @@ import React, { StrictMode } from 'react';
 //#region React Component imports
 //#endregion
 
-import styles from './styles/components/App.module.scss';
+import styles from './styles/App.module.scss';
 
 const App: React.FC = (): JSX.Element => {
   return (
