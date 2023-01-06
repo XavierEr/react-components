@@ -1,0 +1,2 @@
+    "start": "./node_modules/.bin/webpack serve -c webpack.dev.js",
+    "build:prod": "./node_modules/.bin/webpack -c webpack.prod.js",
