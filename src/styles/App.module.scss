@@ -2,4 +2,16 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+
+  .header {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 60px;
+  }
+
+  .horizontalBarChart {
+    margin-top: 36px;
+    width: 100%;
+    max-width: 980px;
+  }
 }
