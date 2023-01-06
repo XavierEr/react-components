@@ -67,6 +67,26 @@
             text-align: right;
           }
         }
+
+        &.color0 {
+          background-color: $green-300;
+        }
+
+        &.color1 {
+          background-color: $orange-300;
+        }
+
+        &.color2 {
+          background-color: $blue-300;
+        }
+
+        &.color3 {
+          background-color: $red-300;
+        }
+
+        &.color4 {
+          background-color: $yellow-300;
+        }
       }
 
       &::before {

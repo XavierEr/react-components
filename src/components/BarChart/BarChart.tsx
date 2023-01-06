@@ -16,14 +16,6 @@ const BarChart: React.FC<BarChartProps> = ({
   style,
   type,
 }): JSX.Element => {
-  const colors: Array<string> = [
-    '#59cf1e',
-    '#ff9800',
-    '#228df6',
-    '#fa4c4c',
-    '#eccd33',
-  ];
-
   const highestPoint = useMemo<number>(() => {
     if (bars.length > 0) {
       return bars.reduce<number>((accumulator, currentBar) => {
@@ -62,8 +54,8 @@ const BarChart: React.FC<BarChartProps> = ({
 
                 return (
                   <div
-                    className={styles.bar}
-                    style={{ backgroundColor: colors[index % colors.length], width: `${pointPercentage}%` }}>
+                    className={clsx(styles.bar, styles[`color${index % 5}`])}
+                    style={{ width: `${pointPercentage}%` }}>
                     <div className={styles.labelContainer}>
                       {!!point.label ? <div className={styles.label} title={point.label}>{point.label}</div> : null}
                       <div className={styles.value} title={point.value.toString()}>{point.value}</div>
