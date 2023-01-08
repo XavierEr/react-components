@@ -15,6 +15,7 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
   bars,
   className,
   numberOfSteps = 4,
+  showSteps = false,
   style,
 }): JSX.Element => {
 
@@ -28,9 +29,9 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
         const sumOfPoints = currentBar.points.reduce<number>((accumulator, currentPoint) => accumulator + currentPoint.value, 0);
 
         if (accumulator < sumOfPoints) {
-          return sumOfPoints;
+          // return sumOfPoints;
           // return roundUpToNearestNumber(sumOfPoints, Number('1'.padEnd(sumOfPoints.toString().length, '0')));
-          // return roundUpToNearestNumber(sumOfPoints, Number('1'.padEnd(sumOfPoints.toString().length - 1, '0')));
+          return roundUpToNearestNumber(sumOfPoints, Number('1'.padEnd(sumOfPoints.toString().length - 1, '0')));
         }
         return accumulator;
       }, 0);
@@ -63,16 +64,20 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
                   </div>
                 );
               })}
+
+              {!showSteps && bar.points.length > 1 ? <div className={styles.totalLabel}>
+                {bar.points.reduce<number>((accumulator, currentPoint) => accumulator + currentPoint.value, 0)}
+              </div> : null}
             </div>
           );
         })}
 
-        {[...Array(numberOfSteps).keys()].map((value: number) => {
+        {showSteps && [...Array(numberOfSteps).keys()].map((value: number) => {
           const step = (value + 1) / numberOfSteps;
 
           return (
             <div key={value} className={styles.step} style={{ left: `${step * 100}%` }}>
-              <div className={styles.label}>{Math.ceil(step * highestPoint)}</div>
+              <div className={styles.label}>{Math.trunc(step * highestPoint)}</div>
             </div>
           );
         })}

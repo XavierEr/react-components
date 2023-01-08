@@ -38,6 +38,7 @@
     position: relative;
 
     .barContainer {
+      align-items: flex-start;
       border-radius: 0 2px 2px 0;
       display: flex;
       height: 32px;
@@ -50,8 +51,6 @@
         opacity: 0.8;
 
         .labelContainer {
-          color: $neutral-black;
-          font-size: 10px;
           max-width: 100%;
           padding: 0 4px;
           position: absolute;
@@ -66,6 +65,7 @@
           > .label,
           > .value {
             @include ellipsis;
+            font-size: 10px;
             text-align: right;
           }
         }
@@ -93,6 +93,11 @@
         &.color4 {
           background-color: $yellow-300;
         }
+      }
+
+      .totalLabel {
+        font-size: 10px;
+        transform: translate(-50%, -100%);
       }
 
       &::before {
