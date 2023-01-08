@@ -13,10 +13,11 @@ button,
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
+  -webkit-tap-highlight-color: transparent;
   height: 100%;
   margin: 0;
   overflow: auto;
