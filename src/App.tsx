@@ -3,7 +3,7 @@ import React, { StrictMode } from 'react';
 //#endregion
 
 //#region React Component imports
-import HorizontalBarChart from './components/HorizontalBarChart/HorizontalBarChart';
+import HorizontalBarGraph from './components/HorizontalBarGraph/HorizontalBarGraph';
 //#endregion
 
 import styles from './styles/App.module.scss';
@@ -40,9 +40,9 @@ const App: React.FC = (): JSX.Element => {
       <div className={styles.container}>
         <div className={styles.header}>React Components</div>
 
-        <HorizontalBarChart className={styles.horizontalBarChart} bars={singlePointBars} showSteps={true} />
+        <HorizontalBarGraph className={styles.horizontalBarGraph} bars={singlePointBars} showSteps={true} />
 
-        <HorizontalBarChart className={styles.horizontalBarChart} bars={bars} />
+        <HorizontalBarGraph className={styles.horizontalBarGraph} bars={bars} />
       </div>
     </StrictMode>
   );

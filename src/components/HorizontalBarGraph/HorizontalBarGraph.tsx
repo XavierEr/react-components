@@ -9,9 +9,9 @@ import React, {
 import { clsx } from '../../helpers/clsx';
 //#endregion
 
-import styles from './HorizontalBarChart.module.scss';
+import styles from './HorizontalBarGraph.module.scss';
 
-const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
+const HorizontalBarGraph: React.FC<HorizontalBarGraphProps> = ({
   bars,
   className,
   numberOfSteps = 4,
@@ -87,4 +87,4 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
   );
 }
 
-export default HorizontalBarChart;
+export default HorizontalBarGraph;
