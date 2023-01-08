@@ -5,6 +5,9 @@ import React, {
 } from 'react';
 //#endregion
 
+//#region Type imports
+//#endregion
+
 //#region Helper imports
 import { clsx } from '../../helpers/clsx';
 //#endregion
@@ -72,7 +75,7 @@ const HorizontalBarGraph: React.FC<HorizontalBarGraphProps> = ({
           );
         })}
 
-        {showSteps && [...Array(numberOfSteps).keys()].map((value: number) => {
+        {showSteps && [...Array(Math.max(numberOfSteps, 0)).keys()].map((value: number) => {
           const step = (value + 1) / numberOfSteps;
 
           return (
