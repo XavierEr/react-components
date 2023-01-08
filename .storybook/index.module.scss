@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+button,
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  width: 100%;
+}
