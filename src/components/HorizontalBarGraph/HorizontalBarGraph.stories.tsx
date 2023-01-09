@@ -3,9 +3,6 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 //#endregion
 
-//#region Type imports
-//#endregion
-
 import HorizontalBarGraph from './HorizontalBarGraph';
 
 export default {
@@ -20,12 +17,12 @@ export default {
     numberOfSteps: {
       control: { type: 'number', min: 0, max: 30, step: 1 },
       defaultValue: 4,
-      description: 'Set number of breakpoints'
+      description: 'How any steps to be display on the X axis?'
     },
     showSteps: {
       control: 'boolean',
       defaultValue: false,
-      description: 'Display breakpoints'
+      description: 'Is steps on the X axis visible?'
     },
     style: { control: { disable: true } },
   },

@@ -6,6 +6,7 @@ import React, {
 //#endregion
 
 //#region Type imports
+import type { HorizontalBarGraphProps } from './horizontalBarGraphProps';
 //#endregion
 
 //#region Helper imports
